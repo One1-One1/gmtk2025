@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhjj65esfdxo5"]
+
+[ext_resource type="Script" uid="uid://dqe2ff7ogrrny" path="res://scenes/directions.gd" id="1_nt7q6"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nt7q6")
+
+[node name="left" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.729412)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -476.0
+offset_right = 192.0
+offset_bottom = 484.0
+grow_vertical = 2
+text = "LEFT"
+
+[node name="right" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.729412)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -476.0
+offset_bottom = 484.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "RIGHT"
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfidsn1dcifae"]
+[gd_scene load_steps=10 format=3 uid="uid://bfidsn1dcifae"]
 
 [ext_resource type="PackedScene" uid="uid://crsia0sl0yvh5" path="res://scenes/wall.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://byj47nbl76ip3" path="res://assets/placeholder/evilsnake.png" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bhjj65esfdxo5" path="res://scenes/ui.tscn" id="3_sugp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -35,7 +36,8 @@ point_count = 4
 environment = SubResource("Environment_sugp2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+transform = Transform3D(-0.860458, 0.0980368, -0.5, -0.496786, 0.0566016, 0.866025, 0.113203, 0.993572, 1.56217e-15, 0, 3, 0)
+light_energy = 1.327
 shadow_enabled = true
 
 [node name="floor" type="MeshInstance3D" parent="."]
@@ -44,7 +46,6 @@ mesh = SubResource("PlaneMesh_0wfyh")
 surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
 
 [node name="walls" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="wall5" parent="walls" instance=ExtResource("1_o5qli")]
 transform = Transform3D(-4.37114e-08, -2, 0, 1, -8.74228e-08, 0, 0, 0, 2, 2, 1, 0)
@@ -64,11 +65,16 @@ layers = 2
 texture = ExtResource("2_0wfyh")
 
 [node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
 curve = SubResource("Curve3D_sugp2")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-4.37104e-08, 0, -0.999978, 0, 1, 0, 0.999978, 0, -4.37104e-08, 0, 0, -1.00504)
+transform = Transform3D(-1.23577e-06, 0, 0.999975, 0, 1, 0, -0.999975, 0, -1.23577e-06, -0.00901268, 0, 0.996025)
+progress = 3.1765
 
 [node name="Camera3D" type="Camera3D" parent="Path3D/PathFollow3D"]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 1.00504, 0, 1)
+
+[node name="UI" parent="." node_paths=PackedStringArray("camera", "path") instance=ExtResource("3_sugp2")]
+camera = NodePath("../Path3D/PathFollow3D/Camera3D")
+path = NodePath("../Path3D/PathFollow3D")
