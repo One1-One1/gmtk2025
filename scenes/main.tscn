@@ -83,4 +83,7 @@ camera = NodePath("../Path3D/PathFollow3D/roomCamera")
 path = NodePath("../Path3D/PathFollow3D")
 
 [node name="interactableSprite" parent="." instance=ExtResource("5_tbgi4")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.53587, 1, 0.323807)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.89837, 1.17295, 0.919113)
+
+[node name="interactableSprite2" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.25754, 0.962303, -0.95392)
