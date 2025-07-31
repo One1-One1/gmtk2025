@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnypy3o5jcf8j"]
+
+[ext_resource type="Script" uid="uid://c5wvp48180lha" path="res://scripts/interactable.gd" id="1_phvcj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_y4ikl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3nqm"]
+billboard_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vx0dd"]
+
+[node name="interactableSprite" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_y4ikl")
+surface_material_override/0 = SubResource("StandardMaterial3D_t3nqm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_phvcj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_vx0dd")
