@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c83tyfj5suuup"]
+[gd_scene load_steps=3 format=3 uid="uid://c83tyfj5suuup"]
 
 [ext_resource type="Script" uid="uid://c76eeco1fa4bj" path="res://scripts/mainScene.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://doaafokwr01y7" path="res://assets/placeholder/cursor.png" id="2_0wfyh"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o5qli")
+cursorDef = ExtResource("2_0wfyh")
 
 [node name="main3d" type="Node3D" parent="."]
 

@@ -1,8 +1,12 @@
 extends Control
 
+@export var cursorDef:Texture
 @onready var main3D:Node3D = $main3d
 var roomMain:Node3D
 var roomNum:String = "0"
+
+func _ready():
+	Input.set_custom_mouse_cursor(cursorDef)
 
 func unloadLevel():
 	if(is_instance_valid(roomMain)):
