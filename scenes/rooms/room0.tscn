@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bfidsn1dcifae"]
+[gd_scene load_steps=13 format=3 uid="uid://bfidsn1dcifae"]
 
-[ext_resource type="PackedScene" uid="uid://crsia0sl0yvh5" path="res://scenes/wall.tscn" id="1_0j4cp"]
-[ext_resource type="PackedScene" uid="uid://dg1ex6rfuj2i3" path="res://scenes/room_camera.tscn" id="2_qdqsw"]
-[ext_resource type="PackedScene" uid="uid://bhjj65esfdxo5" path="res://scenes/ui.tscn" id="3_bqk7w"]
-[ext_resource type="PackedScene" uid="uid://bnypy3o5jcf8j" path="res://scenes/interactable_sprite.tscn" id="4_bowwu"]
+[ext_resource type="PackedScene" uid="uid://crsia0sl0yvh5" path="res://scenes/objects/wall.tscn" id="1_0j4cp"]
+[ext_resource type="PackedScene" uid="uid://dg1ex6rfuj2i3" path="res://scenes/ui/room_camera.tscn" id="2_qdqsw"]
+[ext_resource type="PackedScene" uid="uid://bhjj65esfdxo5" path="res://scenes/ui/ui.tscn" id="3_bqk7w"]
+[ext_resource type="PackedScene" uid="uid://bnypy3o5jcf8j" path="res://scenes/objects/interactable_sprite.tscn" id="4_bowwu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -31,35 +31,45 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="BoxMesh" id="BoxMesh_0j4cp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qdqsw"]
+albedo_color = Color(0.0974014, 0.0335177, 9.02452e-09, 1)
+
 [node name="room0" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_sugp2")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.334231, 0.933381, 0.130724, -0.496786, 0.0566017, 0.866025, 0.800933, -0.354394, 0.482609, 0, 3, 0)
-light_energy = 1.327
-light_indirect_energy = 1.327
-shadow_enabled = true
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95999, 0)
+light_color = Color(0.999999, 0.998868, 0.793484, 1)
+light_energy = 3.939
+omni_range = 3.237
 
 [node name="floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("PlaneMesh_0wfyh")
 surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
 
+[node name="floor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, -2, 1.74846e-07, 0, -1.74846e-07, -2, 0, 2, 0)
+mesh = SubResource("PlaneMesh_0wfyh")
+surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
+
 [node name="walls" type="Node3D" parent="."]
 
 [node name="wall5" parent="walls" instance=ExtResource("1_0j4cp")]
-transform = Transform3D(-4.37114e-08, -2, 0, 1, -8.74228e-08, 0, 0, 0, 2, 2, 1, 0)
+transform = Transform3D(-8.74228e-08, -2, 0, -8.74228e-08, 3.82137e-15, -1, 2, -8.74228e-08, -4.37114e-08, 2, 1, 0)
 
 [node name="wall6" parent="walls" instance=ExtResource("1_0j4cp")]
-transform = Transform3D(1.91069e-15, 8.74228e-08, 2, 1, -8.74228e-08, 0, 4.37114e-08, 2, -8.74228e-08, 0, 1, -2)
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -1, 0, 2, -4.37114e-08, 0, 1, -2)
 
 [node name="wall7" parent="walls" instance=ExtResource("1_0j4cp")]
-transform = Transform3D(4.37114e-08, 2, -1.74846e-07, 1, -8.74228e-08, 0, -3.82137e-15, -1.74846e-07, -2, -2, 1, 0)
+transform = Transform3D(-8.74228e-08, 2, 3.82137e-15, -8.74228e-08, 3.82137e-15, -1, -2, -8.74228e-08, 4.37114e-08, -2, 1, 0)
 
 [node name="wall8" parent="walls" instance=ExtResource("1_0j4cp")]
-transform = Transform3D(-8.88178e-16, -5.96046e-08, -2, 1, -8.74228e-08, 0, -4.37114e-08, -2, 5.96046e-08, 0, 1, 2)
+transform = Transform3D(-2, 8.74228e-08, 4.37114e-08, -8.74228e-08, -1.50996e-07, -1, -8.74228e-08, -2, 7.54979e-08, 0, 1, 2)
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
@@ -73,11 +83,18 @@ progress = 3.1765
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
 
 [node name="UI" parent="." node_paths=PackedStringArray("camera", "path") instance=ExtResource("3_bqk7w")]
+visible = false
 camera = NodePath("../Path3D/PathFollow3D/roomCamera")
 path = NodePath("../Path3D/PathFollow3D")
 
-[node name="interactableSprite" parent="." instance=ExtResource("4_bowwu")]
-transform = Transform3D(-4.37114e-08, 0, -0.2, 0, 1, 0, 1, 0, -8.74228e-09, 1.89837, 1.17295, 0.919113)
+[node name="objects" type="Node3D" parent="."]
 
-[node name="interactableSprite2" parent="." instance=ExtResource("4_bowwu")]
-transform = Transform3D(-4.37114e-08, 0, -0.2, 0, 1, 0, 1, 0, -8.74228e-09, 1.25754, 0.962303, -0.95392)
+[node name="interactableSprite" parent="objects" instance=ExtResource("4_bowwu")]
+transform = Transform3D(-4.37114e-08, 0, -0.2, 0, 1, 0, 1, 0, -8.74228e-09, 1.89837, 1.17295, 0.919113)
+skeleton = NodePath("../..")
+
+[node name="Door" parent="objects" instance=ExtResource("4_bowwu")]
+transform = Transform3D(-3.49691e-08, 0, -0.2, 0, 1.6, 0, 0.8, 0, -8.74228e-09, 2, 0.8, -1)
+mesh = SubResource("BoxMesh_0j4cp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdqsw")
