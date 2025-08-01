@@ -23,3 +23,17 @@ func _on_right_mouse_entered():
 	Input.set_custom_mouse_cursor(CursorR)
 func _on_right_mouse_exited():
 	Input.set_custom_mouse_cursor(CursorDef)
+
+
+func _on_button_pressed():
+	Weirdness.progress +=1
+	print(Weirdness.progress)
+
+
+func _on_button_2_pressed():
+	if Weirdness.weird == true:
+		Weirdness.weird = false
+		print("normal")
+	else:
+		Weirdness.weird = true
+		print("abnormal")

@@ -7,6 +7,7 @@ var roomNum:String = "0"
 
 func _ready():
 	Input.set_custom_mouse_cursor(cursorDef)
+	print(Weirdness.weird)
 
 func unloadLevel():
 	if(is_instance_valid(roomMain)):
@@ -23,3 +24,4 @@ func loadLevel(roomName:String):
 		
 func _on_start_pressed():
 	loadLevel("room%s" % roomNum)
+	$start.hide()

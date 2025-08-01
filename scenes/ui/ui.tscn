@@ -45,9 +45,41 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "RIGHT"
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -648.0
+offset_top = -273.0
+offset_right = -494.0
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "progress +1"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -280.0
+offset_right = 117.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "weird toggle"
+
 [connection signal="mouse_entered" from="left" to="." method="_on_left_mouse_entered"]
 [connection signal="mouse_exited" from="left" to="." method="_on_left_mouse_exited"]
 [connection signal="pressed" from="left" to="." method="_on_left_pressed"]
 [connection signal="mouse_entered" from="right" to="." method="_on_right_mouse_entered"]
 [connection signal="mouse_exited" from="right" to="." method="_on_right_mouse_exited"]
 [connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
