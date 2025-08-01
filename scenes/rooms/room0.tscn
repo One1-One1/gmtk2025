@@ -48,28 +48,34 @@ light_energy = 3.939
 omni_range = 3.237
 
 [node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(6.1, 0, 0, 0, 2, 0, 0, 0, 2.1, 0, 0.001, 0)
 mesh = SubResource("PlaneMesh_0wfyh")
 surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
 
 [node name="floor2" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, -2, 1.74846e-07, 0, -1.74846e-07, -2, 0, 2, 0)
+transform = Transform3D(6, 0, 0, 0, -2, 3.01992e-07, 0, -3.01992e-07, -2, 0, 2, 0)
 mesh = SubResource("PlaneMesh_0wfyh")
 surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
 
 [node name="walls" type="Node3D" parent="."]
 
 [node name="wall5" parent="walls" instance=ExtResource("1_0j4cp")]
-transform = Transform3D(-8.74228e-08, -2, 0, -8.74228e-08, 3.82137e-15, -1, 2, -8.74228e-08, -4.37114e-08, 2, 1, 0)
+transform = Transform3D(-8.74228e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 2, -4.37114e-08, 1.91069e-15, 2, 1, 0)
 
 [node name="wall6" parent="walls" instance=ExtResource("1_0j4cp")]
 transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -1, 0, 2, -4.37114e-08, 0, 1, -2)
+
+[node name="wall9" parent="walls" instance=ExtResource("1_0j4cp")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -1, 0, 2, -4.37114e-08, -4, 1, -2)
 
 [node name="wall7" parent="walls" instance=ExtResource("1_0j4cp")]
 transform = Transform3D(-8.74228e-08, 2, 3.82137e-15, -8.74228e-08, 3.82137e-15, -1, -2, -8.74228e-08, 4.37114e-08, -2, 1, 0)
 
 [node name="wall8" parent="walls" instance=ExtResource("1_0j4cp")]
 transform = Transform3D(-2, 8.74228e-08, 4.37114e-08, -8.74228e-08, -1.50996e-07, -1, -8.74228e-08, -2, 7.54979e-08, 0, 1, 2)
+
+[node name="wall10" parent="walls" instance=ExtResource("1_0j4cp")]
+transform = Transform3D(-2, 8.74228e-08, 4.37114e-08, -8.74228e-08, -1.50996e-07, -1, -8.74228e-08, -2, 7.54979e-08, -4, 1, 2)
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
@@ -83,7 +89,6 @@ progress = 3.1765
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
 
 [node name="UI" parent="." node_paths=PackedStringArray("camera", "path") instance=ExtResource("3_bqk7w")]
-visible = false
 camera = NodePath("../Path3D/PathFollow3D/roomCamera")
 path = NodePath("../Path3D/PathFollow3D")
 
