@@ -24,4 +24,7 @@ func loadLevel(roomName:String):
 		
 func _on_start_pressed():
 	loadLevel("room%s" % roomNum)
-	$start.hide()
+	$startmenu.hide()
+
+func _on_quit_pressed():
+	get_tree().quit()
