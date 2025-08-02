@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyg7j7xcmc2lg"]
+
+[ext_resource type="Script" uid="uid://bhim3lxf6k5m8" path="res://scripts/endingscreen.gd" id="1_8iyw2"]
+
+[node name="endingscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8iyw2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -396.0
+offset_top = -290.0
+offset_right = 396.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/bold_font_size = 400
+bbcode_enabled = true
+text = "[b]FIN[/b]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -164.0
+offset_right = 147.0
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "quit"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
