@@ -9,7 +9,7 @@ billboard_mode = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vx0dd"]
 
-[node name="interactableSprite" type="MeshInstance3D"]
+[node name="Bed" type="MeshInstance3D"]
 mesh = SubResource("QuadMesh_y4ikl")
 surface_material_override/0 = SubResource("StandardMaterial3D_t3nqm")
 

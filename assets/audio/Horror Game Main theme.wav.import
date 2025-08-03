@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dc8b8qopm456d"
+path="res://.godot/imported/Horror Game Main theme.wav-6b528b9ca0bd3c80364ca57c551e3f08.sample"
+
+[deps]
+
+source_file="res://assets/audio/Horror Game Main theme.wav"
+dest_files=["res://.godot/imported/Horror Game Main theme.wav-6b528b9ca0bd3c80364ca57c551e3f08.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

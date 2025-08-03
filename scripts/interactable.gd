@@ -4,6 +4,9 @@ class_name Interactable
 @export var InteractionNum:int
 var nextRoom:String
 var correct := false
+@onready var doorsfx = $"../AudioStreamPlayer3D"
+@onready var bedsfx = $"../AudioStreamPlayer3D"
+@onready var current_scene = get_tree().current_scene
 
 func get_interaction_text():
 	return "Interact"
@@ -13,9 +16,13 @@ func interact():
 		print("Interacted!")
 	elif InteractionNum == 1:
 		bedCheck()
+		Transition.transition()
+		await Transition.on_transition_finished
 		roomNext()
 	elif InteractionNum == 2:
 		doorCheck()
+		Transition.transition()
+		await Transition.on_transition_finished
 		roomNext()
 	
 func roomNext():
@@ -23,15 +30,15 @@ func roomNext():
 		Weirdness.randomRoom()
 		nextRoom = JSON.stringify(Weirdness.roomID)
 		print(nextRoom)
-		MainScene.loadLevel("room1")
+		Weirdness.changeScene("room%s" % nextRoom)
 	else:
 		nextRoom = JSON.stringify(Weirdness.roomID)
-		MainScene.loadLevel("room%s" % nextRoom)
+		Weirdness.changeScene("room%s" % nextRoom)
 
 
 func bedCheck() -> void:
-		print("aaaa")
-		if Weirdness.weird == true:
+		bedsfx.play()
+		if current_scene.isWeird == true:
 			Weirdness.progress += 1
 			correct = true
 			print("bed win")
@@ -42,15 +49,15 @@ func bedCheck() -> void:
 			print("bed fail")
 			
 func doorCheck():
-		print("bbbb")
-		if Weirdness.weird == false:
+		doorsfx.play()
+		if current_scene.isWeird == false:
 			Weirdness.progress += 1
-			return true
+			correct = true
 			print("door win")
 		else:
 			Weirdness.progress = 0
 			Weirdness.roomID = 0
-			return false
+			correct = true
 			print("door fail")
 
 		

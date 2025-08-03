@@ -9,3 +9,5 @@ script = ExtResource("1_rf38d")
 [node name="interactionRay" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -3)
 script = ExtResource("1_htqe6")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="."]

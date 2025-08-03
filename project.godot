@@ -19,13 +19,8 @@ config/icon="res://icon.svg"
 
 Weirdness="*res://weirdness.gd"
 MainScene="*res://scripts/startMenu.gd"
-LoadingScreen1="*res://addons/scene_manager/autoload/loading_screen.gd"
-LoadingScreen2="*res://addons/scene_manager/autoload/loading_screen.tscn"
-GlobalMaterial="*res://addons/scene_manager/autoload/material.tres"
-ResourceRef="*res://addons/scene_manager/autoload/resource_ref.gd"
-SceneManager="*res://addons/scene_manager/autoload/scene_manager.gd"
-SceneManager2="*res://addons/scene_manager/autoload/scene_manager.tscn"
-Transition="*res://addons/scene_manager/autoload/transition.gd"
+Transition="*res://scenes/transition.tscn"
+GlobalAudioStreamPlayer="*res://audio_stream_player.gd"
 
 [display]
 
