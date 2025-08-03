@@ -12,9 +12,7 @@ func get_interaction_text():
 	return "Interact"
 	
 func interact():
-	if InteractionNum == 0:
-		print("Interacted!")
-	elif InteractionNum == 1:
+	if InteractionNum == 1:
 		bedCheck()
 		Transition.transition()
 		await Transition.on_transition_finished
@@ -24,16 +22,33 @@ func interact():
 		Transition.transition()
 		await Transition.on_transition_finished
 		roomNext()
+	elif InteractionNum == 3:
+		Dialoge.dialogue("abnormality_sloth")
+	elif InteractionNum == 4:
+		Dialoge.dialogue("abnoGreed")
+	elif InteractionNum == 5:
+		Dialoge.dialogue("abnoEnvy")
+	elif InteractionNum == 6:
+		Dialoge.dialogue("abnolust")
+	elif InteractionNum == 7:
+		Dialoge.dialogue("abnopride")
+	elif InteractionNum == 8:
+		Dialoge.dialogue("abnoglut")
+	elif InteractionNum == 9:
+		Dialoge.dialogue("abnowrath")
+	
 	
 func roomNext():
-	if correct == true:
+	if Weirdness.progress >= 9:
+		get_tree().change_scene_to_file("res://scenes/endingscreen.tscn")
+	elif correct == false:
+		nextRoom = JSON.stringify(Weirdness.roomID)
+		Weirdness.changeScene("room%s" % nextRoom)
+	elif correct == true:
 		Weirdness.randomRoom()
 		nextRoom = JSON.stringify(Weirdness.roomID)
+		Weirdness.changeScene("room%s" % nextRoom)
 		print(nextRoom)
-		Weirdness.changeScene("room%s" % nextRoom)
-	else:
-		nextRoom = JSON.stringify(Weirdness.roomID)
-		Weirdness.changeScene("room%s" % nextRoom)
 
 
 func bedCheck() -> void:

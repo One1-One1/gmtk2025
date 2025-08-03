@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvpnvxig58oye"]
+
+[ext_resource type="Script" uid="uid://c5wvp48180lha" path="res://scripts/interactable.gd" id="1_fqty4"]
+[ext_resource type="Texture2D" uid="uid://dovmta6mj0xtb" path="res://assets/art/Side 3/Bed (No Front Curtain).png" id="1_raxto"]
+[ext_resource type="AudioStream" uid="uid://bt0pdc2gyi8s" path="res://assets/audio/BED_INTERACT.wav" id="2_fqty4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fqty4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_853xm"]
+albedo_texture = ExtResource("1_raxto")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_akt7f"]
+
+[node name="Bed" type="MeshInstance3D"]
+transform = Transform3D(2.2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("QuadMesh_fqty4")
+surface_material_override/0 = SubResource("StandardMaterial3D_853xm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_fqty4")
+InteractionNum = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_akt7f")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_fqty4")
+volume_db = 10.0
+max_db = 6.0

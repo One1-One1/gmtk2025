@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://byo0jqpml7ywt"]
+
+[ext_resource type="Script" uid="uid://c5wvp48180lha" path="res://scripts/interactable.gd" id="1_clech"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_rem8n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nmp0x"]
+
+[node name="abnormality" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_rem8n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_clech")
+InteractionNum = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_nmp0x")

@@ -1,0 +1,262 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbhiycaogaij7"]
+
+[ext_resource type="Script" uid="uid://ctm5x1mxo6ow0" path="res://scenes/dialoge.gd" id="1_4kitf"]
+[ext_resource type="FontFile" uid="uid://cl5dkn5wyg4uv" path="res://assets/art/DotGothic16-Regular.ttf" id="1_8c05t"]
+
+[sub_resource type="Animation" id="Animation_0ifb7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ah!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0993179, 0.325468, 0.979598, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4kitf"]
+resource_name = "abnormality_sloth"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 2, 3, 3.7, 4.36667, 5, 6, 6.98914, 8.00613, 8.99804, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Ah!", "Henry, there’s always tomorrow", "I saved it for after tea", "after payday", "after the “right moment”", "…", "and then the clock stopped, lad", "That’s what I usually think", "It even sounds like my great uncle", "The “tomorrow” man I met once", "I’m scared of choosing and of turning into him", "so I take one step now"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6, 10, 12),
+"transitions": PackedFloat32Array(68.5935, 6167.04, 1, 1),
+"update": 0,
+"values": [Color(0.0993179, 0.325468, 0.979598, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sgbje"]
+resource_name = "abnopride"
+length = 8.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.5, 4, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I waited to be the best version before choosing", "The mirror never said yes", "I polish choices until they vanish", "My great-aunt taught “be right or be quiet”", "I’m scared of being wrong", "But I am going to choose properly now"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.76667, 2.5, 8, 8.5),
+"transitions": PackedFloat32Array(1, 1e+06, 1e+06, 1, 1),
+"update": 0,
+"values": [Color(0.869321, 0.83439, 1.54018e-06, 1), Color(0.869321, 0.83439, 1.54972e-06, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_16ybi"]
+resource_name = "abnoEnvy"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I lived by comparisons, Henry", "Your cousin’s medals, their classmates’ ranks", "Wanting their steps, I never took my own", "It stings", "I call it planning when I trace other people’s routes", "It’s really just envy dressed as caution... "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.5, 8.5, 9),
+"transitions": PackedFloat32Array(1, 1e+06, 1e+06, 1, 1),
+"update": 0,
+"values": [Color(1.15514e-06, 0.768766, 0.0252217, 1), Color(1.15484e-06, 0.768766, 0.0252216, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4ac74"]
+resource_name = "abnoGreed"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.5, 6, 10, 11),
+"transitions": PackedFloat32Array(1, 1e+06, 1e+06, 1, 1),
+"update": 0,
+"values": [Color(0.721208, 0.637673, 5.77569e-07, 1), Color(0.721208, 0.637673, 5.96046e-07, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Never leave value on this table, Henry", "Keep the extra key, the spare plan", "I held everything too tightly... ", "My hands were too full to open a single door", "I know that voice", "Aunt Lucinda, I met her when I was small...", "Fear tightens because I hoard all the options and call it prudence"]
+}
+
+[sub_resource type="Animation" id="Animation_c1as5"]
+resource_name = "abnowrath"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5, 9, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I bottled every shout for later, Henry", "When I finally used it", "I broke the only thing within reach", "That shape of quiet anger", "That’s Dad’s cousin...", "I’m afraid of that heat in me", "so I keep my hands open", "admit it’s there, and choose while my head is still cool"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.5, 11.5, 12),
+"transitions": PackedFloat32Array(1, 1e+06, 901250, 1, 1),
+"update": 0,
+"values": [Color(0.911859, 0, 0.0407659, 1), Color(0.911859, 0, 0.0407659, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d8on2"]
+resource_name = "abnoglut"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I kept a taste for later, Henry", "One more read, one more sample, one more quick check", "Until I was full and the day went cold", "Hearing that makes me feel a sense of deja-vu", "It even sounds like Grandmother’s cousin", "who sampled every plan and finished none", "I’m also afraid to choose half-prepared..."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.5, 10, 11),
+"transitions": PackedFloat32Array(1, 1e+06, 1e+06, 1, 1),
+"update": 0,
+"values": [Color(0.824225, 0.512957, 0, 1), Color(0.824225, 0.512957, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vhc3i"]
+resource_name = "abnolust"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.5, 6, 11.5, 12),
+"transitions": PackedFloat32Array(1, 1e+06, 1e+06, 1, 1),
+"update": 0,
+"values": [Color(1, 0.37752, 0.617651, 1), Color(1, 0.37752, 0.617651, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5, 9, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I waited for the door with no hairline cracks, Henry", "I kept sanding the choice until it vanished", "when it finally looked clean", "there was no day left to walk through...", "That voice loves the flawless version", "It sounds like Mum’s cousin-by-marriage, Isla", "She rewrote endings until they went white", "I’m afraid of choosing with the seams showing..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sgbje"]
+_data = {
+&"RESET": SubResource("Animation_0ifb7"),
+&"abnoEnvy": SubResource("Animation_16ybi"),
+&"abnoGreed": SubResource("Animation_4ac74"),
+&"abnoglut": SubResource("Animation_d8on2"),
+&"abnolust": SubResource("Animation_vhc3i"),
+&"abnopride": SubResource("Animation_sgbje"),
+&"abnormality_sloth": SubResource("Animation_4kitf"),
+&"abnowrath": SubResource("Animation_c1as5")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_4kitf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sgbje")
+}
+
+[node name="Label" type="Label" parent="AnimationPlayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.0993179, 0.325468, 0.979598, 1)
+theme_override_fonts/font = ExtResource("1_8c05t")
+theme_override_font_sizes/font_size = 28
+text = "Ah!"
+horizontal_alignment = 1
+vertical_alignment = 1

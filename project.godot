@@ -20,7 +20,8 @@ config/icon="res://icon.svg"
 Weirdness="*res://weirdness.gd"
 MainScene="*res://scripts/startMenu.gd"
 Transition="*res://scenes/transition.tscn"
-GlobalAudioStreamPlayer="*res://audio_stream_player.gd"
+GlobalAudioStreamPlayer="*res://scripts/audio_stream_player.gd"
+Dialoge="*res://scenes/dialoge.tscn"
 
 [display]
 

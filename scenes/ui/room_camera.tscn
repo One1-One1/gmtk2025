@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg1ex6rfuj2i3"]
+[gd_scene load_steps=4 format=3 uid="uid://dg1ex6rfuj2i3"]
 
 [ext_resource type="Script" uid="uid://cgj31jnvsdk3s" path="res://scripts/interaction.gd" id="1_htqe6"]
 [ext_resource type="Script" uid="uid://djbsewmxo326s" path="res://scripts/interactionRay.gd" id="1_rf38d"]
+[ext_resource type="FontFile" uid="uid://cl5dkn5wyg4uv" path="res://assets/art/DotGothic16-Regular.ttf" id="3_6gimn"]
 
 [node name="roomCamera" type="Camera3D"]
 script = ExtResource("1_rf38d")
@@ -11,3 +12,21 @@ target_position = Vector3(0, 0, -3)
 script = ExtResource("1_htqe6")
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_6gimn")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

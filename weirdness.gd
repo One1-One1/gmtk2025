@@ -20,25 +20,25 @@ func randomRoom():
 		roomID = roomRandom.randi_range(1, 2)
 	elif progress == 2:
 		
-		roomID = roomRandom.randi_range(5, 8)
+		roomID = roomRandom.randi_range(3, 4)
 	elif progress == 3:
 		
-		roomID = roomRandom.randi_range(9, 12)
+		roomID = roomRandom.randi_range(5, 6)
 	elif progress == 4:
 		
-		roomID = roomRandom.randi_range(13, 16)
+		roomID = roomRandom.randi_range(7, 8)
 	elif progress == 5:
 		
-		roomID = roomRandom.randi_range(17, 20)
+		roomID = roomRandom.randi_range(9, 10)
 	elif progress == 6:
 		
-		roomID = roomRandom.randi_range(21, 24)
+		roomID = roomRandom.randi_range(11, 12)
 	elif progress == 7:
 		
-		roomID = roomRandom.randi_range(25, 28)
+		roomID = roomRandom.randi_range(13, 14)
 	elif progress == 8:
 		
-		roomID = roomRandom.randi_range(29, 32)
+		roomID = roomRandom.randi_range(15, 16)
 		
 
 func changeScene(roomName):

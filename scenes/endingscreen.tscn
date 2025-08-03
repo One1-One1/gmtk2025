@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyg7j7xcmc2lg"]
+[gd_scene load_steps=4 format=3 uid="uid://cyg7j7xcmc2lg"]
 
 [ext_resource type="Script" uid="uid://bhim3lxf6k5m8" path="res://scripts/endingscreen.gd" id="1_8iyw2"]
+[ext_resource type="Texture2D" uid="uid://cnpab08kmfhhx" path="res://assets/henry.png" id="2_4pnwo"]
+[ext_resource type="FontFile" uid="uid://cl5dkn5wyg4uv" path="res://assets/art/DotGothic16-Regular.ttf" id="2_jcpid"]
 
 [node name="endingscreen" type="Control"]
 layout_mode = 3
@@ -19,6 +21,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Henry" type="Sprite2D" parent="Panel"]
+position = Vector2(665, 320)
+scale = Vector2(4.52, 4.52)
+texture = ExtResource("2_4pnwo")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
@@ -26,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -396.0
-offset_top = -290.0
-offset_right = 396.0
-offset_bottom = 290.0
+offset_left = -195.0
+offset_top = -426.0
+offset_right = 630.0
+offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/bold_font_size = 400
@@ -45,12 +52,88 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -152.0
-offset_top = -164.0
-offset_right = 147.0
-offset_bottom = -133.0
+offset_left = 167.0
+offset_top = -106.0
+offset_right = 518.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "quit"
+theme_override_fonts/font = ExtResource("2_jcpid")
+theme_override_font_sizes/font_size = 28
+text = "QUIT"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -725.0
+offset_top = -115.0
+offset_right = -398.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_jcpid")
+theme_override_font_sizes/font_size = 28
+text = "Audio:
+- Emoticon"
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1170.0
+offset_top = -108.0
+offset_right = -843.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_jcpid")
+theme_override_font_sizes/font_size = 28
+text = "Developer:
+- Allaxatives"
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -929.0
+offset_top = -109.0
+offset_right = -602.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_jcpid")
+theme_override_font_sizes/font_size = 28
+text = "Artist:
+- mimisan"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -582.0
+offset_top = -324.0
+offset_right = -255.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_jcpid")
+theme_override_font_sizes/font_size = 28
+text = "Special Thanks to:
+
+====! Dioff !====
+"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

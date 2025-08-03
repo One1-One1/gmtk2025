@@ -1,0 +1,270 @@
+[gd_scene load_steps=43 format=3 uid="uid://bgyve08fqib6a"]
+
+[ext_resource type="Script" uid="uid://l8stowwgd3dw" path="res://scenes/rooms/roomInfo.gd" id="1_y1c7v"]
+[ext_resource type="AudioStream" uid="uid://81c3shosdv1r" path="res://assets/audio/DOOR_INTERACT.wav" id="2_2qoh7"]
+[ext_resource type="AudioStream" uid="uid://bt0pdc2gyi8s" path="res://assets/audio/BED_INTERACT.wav" id="3_l5kuq"]
+[ext_resource type="Texture2D" uid="uid://co8ys82jj67ok" path="res://assets/art/Wallpaper.png" id="4_qj6fv"]
+[ext_resource type="PackedScene" uid="uid://crsia0sl0yvh5" path="res://scenes/objects/wall.tscn" id="5_30mw7"]
+[ext_resource type="PackedScene" uid="uid://dg1ex6rfuj2i3" path="res://scenes/ui/room_camera.tscn" id="6_8yhfo"]
+[ext_resource type="PackedScene" uid="uid://bhjj65esfdxo5" path="res://scenes/ui/ui.tscn" id="7_f8e06"]
+[ext_resource type="PackedScene" uid="uid://legfot8ng20j" path="res://scenes/objects/door.tscn" id="8_cehiq"]
+[ext_resource type="AudioStream" uid="uid://bc1ic2f3yxptw" path="res://assets/audio/MUFFLED_ARGUMENTS(1).wav" id="9_l5kuq"]
+[ext_resource type="PackedScene" uid="uid://cvpnvxig58oye" path="res://scenes/objects/bed.tscn" id="9_vk3r5"]
+[ext_resource type="PackedScene" uid="uid://bnypy3o5jcf8j" path="res://scenes/objects/interactable_sprite.tscn" id="10_v5a5b"]
+[ext_resource type="Texture2D" uid="uid://c0ga2ttgo83tl" path="res://assets/art/Side 3/Bedside Lamp.png" id="11_k5fli"]
+[ext_resource type="Texture2D" uid="uid://cic7cwf5yncvy" path="res://assets/art/Side 1/Clock.png" id="12_ks7ah"]
+[ext_resource type="Texture2D" uid="uid://b0x2glyaltx60" path="res://assets/art/Side 2/TV.png" id="13_61jj7"]
+[ext_resource type="Texture2D" uid="uid://b1uk6v82lb3hx" path="res://assets/art/Side 2/Big Painting.png" id="14_jwlt8"]
+[ext_resource type="Texture2D" uid="uid://b5n363oyejg6s" path="res://assets/art/Side 2/Tv Stand.png" id="15_ym3ea"]
+[ext_resource type="Texture2D" uid="uid://bmrtnjefb5a78" path="res://assets/art/Side 1/Fireplace.png" id="16_l5aro"]
+[ext_resource type="Texture2D" uid="uid://bbdo47iiuxm7c" path="res://assets/art/Side 3/Wardrobe.png" id="17_qaned"]
+[ext_resource type="Texture2D" uid="uid://bawlapay50nov" path="res://assets/art/Side 3/bookshelf.png" id="18_06eo1"]
+[ext_resource type="Texture2D" uid="uid://bfxhed8qld7en" path="res://assets/art/Side 3/Desk .png" id="19_5pxm7"]
+[ext_resource type="Texture2D" uid="uid://n3mc6grywu75" path="res://assets/art/Side 2/Standing Lamp.png" id="20_jo25h"]
+[ext_resource type="PackedScene" uid="uid://byo0jqpml7ywt" path="res://scenes/abnormality5.tscn" id="21_2qoh7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_0wfyh"]
+sky_material = SubResource("ProceduralSkyMaterial_o5qli")
+
+[sub_resource type="Environment" id="Environment_sugp2"]
+background_mode = 2
+sky = SubResource("Sky_0wfyh")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0wfyh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sugp2"]
+albedo_color = Color(0.175021, 0.0554025, 0.00914948, 1)
+albedo_texture = ExtResource("4_qj6fv")
+
+[sub_resource type="Curve3D" id="Curve3D_sugp2"]
+closed = true
+_data = {
+"points": PackedVector3Array(-0.6, 0, 0, 0.6, 0, 0, 0, 0, -1.00504, 0, 0, -0.6, 0, 0, 0.6, 0.991519, 0, -0.0045069, 0.6, 0, 0, -0.6, 0, 0, -0.00901413, 0, 0.996025, 0, 0, 0.6, 0, 0, -0.6, -1.00053, 0, -0.0045069),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7l62"]
+albedo_color = Color(0.0566714, 0.0160026, 0.000846319, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_r7l62"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wegb"]
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("11_k5fli")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bedml"]
+albedo_texture = ExtResource("12_ks7ah")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anl3s"]
+albedo_texture = ExtResource("13_61jj7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vehu"]
+albedo_texture = ExtResource("14_jwlt8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rbc8"]
+albedo_texture = ExtResource("15_ym3ea")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igcnr"]
+albedo_texture = ExtResource("16_l5aro")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdxyp"]
+albedo_texture = ExtResource("17_qaned")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icdl7"]
+albedo_texture = ExtResource("18_06eo1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bctug"]
+albedo_texture = ExtResource("19_5pxm7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dlwq"]
+albedo_texture = ExtResource("20_jo25h")
+
+[sub_resource type="TextMesh" id="TextMesh_teq4o"]
+text = "6"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qoh7"]
+billboard_mode = 1
+
+[node name="room0" type="Node3D"]
+script = ExtResource("1_y1c7v")
+isWeird = true
+
+[node name="DoorInteract" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2qoh7")
+
+[node name="BedInteract" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l5kuq")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 4
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(320, 180)
+render_target_update_mode = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
+environment = SubResource("Environment_sugp2")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59724, 0.864712, -1.49234)
+light_color = Color(1, 0.680039, 0.437968, 1)
+light_energy = 0.674
+light_indirect_energy = 16.0
+omni_range = 3.237
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40093, 1.04836, 1.72258)
+light_color = Color(1, 0.67347, 0.427097, 1)
+light_energy = 0.565
+light_indirect_energy = 16.0
+omni_range = 3.237
+
+[node name="floor" type="MeshInstance3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(6.1, 0, 0, 0, 2, 0, 0, 0, 2.1, 0, 0.001, 0)
+mesh = SubResource("PlaneMesh_0wfyh")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
+
+[node name="floor2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(6, 0, 0, 0, -2, 3.01992e-07, 0, -3.01992e-07, -2, 0, 2, 0)
+mesh = SubResource("PlaneMesh_0wfyh")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_sugp2")
+
+[node name="walls" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="wall5" parent="SubViewportContainer/SubViewport/walls" instance=ExtResource("5_30mw7")]
+transform = Transform3D(-8.74228e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 2, -4.37114e-08, 1.91069e-15, 2, 1, 0)
+
+[node name="wall6" parent="SubViewportContainer/SubViewport/walls" instance=ExtResource("5_30mw7")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -1, 0, 2, -4.37114e-08, 0, 1, -2)
+
+[node name="wall9" parent="SubViewportContainer/SubViewport/walls" instance=ExtResource("5_30mw7")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -1, 0, 2, -4.37114e-08, -4, 1, -2)
+
+[node name="wall7" parent="SubViewportContainer/SubViewport/walls" instance=ExtResource("5_30mw7")]
+transform = Transform3D(-8.74228e-08, 2, 3.82137e-15, -8.74228e-08, 3.82137e-15, -1, -2, -8.74228e-08, 4.37114e-08, -2, 1, 0)
+
+[node name="wall8" parent="SubViewportContainer/SubViewport/walls" instance=ExtResource("5_30mw7")]
+transform = Transform3D(-2, 8.74228e-08, 4.37114e-08, -8.74228e-08, -1.50996e-07, -1, -8.74228e-08, -2, 7.54979e-08, 0, 1, 2)
+
+[node name="wall10" parent="SubViewportContainer/SubViewport/walls" instance=ExtResource("5_30mw7")]
+transform = Transform3D(-2, 8.74228e-08, 4.37114e-08, -8.74228e-08, -1.50996e-07, -1, -8.74228e-08, -2, 7.54979e-08, -4, 1, 2)
+
+[node name="Path3D" type="Path3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
+curve = SubResource("Curve3D_sugp2")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="SubViewportContainer/SubViewport/Path3D"]
+transform = Transform3D(2.69803e-06, 0, 0.999975, 0, 1, 0, -0.999975, 0, 2.69803e-06, -0.0090177, 0, 0.996025)
+progress = 3.1765
+
+[node name="roomCamera" parent="SubViewportContainer/SubViewport/Path3D/PathFollow3D" instance=ExtResource("6_8yhfo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="objects" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="Door" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("8_cehiq")]
+transform = Transform3D(0.2, 0, 0, 0, 2, 0, 0, 0, 1, 2, 0.682815, -1.26666)
+skeleton = NodePath("../../../..")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="SubViewportContainer/SubViewport/objects/Door"]
+stream = ExtResource("9_l5kuq")
+autoplay = true
+
+[node name="Bed" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("9_vk3r5")]
+transform = Transform3D(-9.61651e-08, 0, 0.5, 0, 2, 0, -2.2, 0, -2.18557e-08, -1.43076, 0.99634, 6.25405e-08)
+skeleton = NodePath("../../../..")
+
+[node name="aa" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95629, 0.190516, -1.62505)
+surface_material_override/0 = SubResource("StandardMaterial3D_r7l62")
+
+[node name="aa7" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(1.13815, 0, 0, 0, 1.52475, 0, 0, 0, 1, 0.294292, 0.282392, 1.9062)
+surface_material_override/0 = SubResource("StandardMaterial3D_r7l62")
+
+[node name="aa2" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(0.25967, 0, 0.170914, 0, 0.5, 0, -0.427284, 0, 0.103868, -1.69086, 0.942829, -1.5295)
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa11" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-1.31507e-08, 0, -0.2, 0, 0.425679, 0, 0.300852, 0, -8.74228e-09, 1.86671, 1.59112, 1.18541)
+material_override = SubResource("StandardMaterial3D_bedml")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa8" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-0.9, 0, -3.01992e-08, 0, 0.8, 0, 1.35896e-07, 0, -0.2, 0.261381, 1.42265, 1.71108)
+material_override = SubResource("StandardMaterial3D_anl3s")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa12" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-1.3, 0, -3.01992e-08, 0, 0.8, 0, 1.96295e-07, 0, -0.2, -1.04374, 1.42265, 1.87117)
+material_override = SubResource("StandardMaterial3D_3vehu")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa9" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-1.26438, 0, -3.01992e-08, 0, 1.35227, 0, 1.90916e-07, 0, -0.2, 0.296707, 0.368065, 1.40226)
+material_override = SubResource("StandardMaterial3D_3rbc8")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa10" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-6.43039e-08, 0, -0.2, 0, 1.35227, 0, 1.4711, 0, -8.74228e-09, 1.75253, 0.623782, 0.227519)
+material_override = SubResource("StandardMaterial3D_igcnr")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa3" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-4.37114e-08, 0, 0.45, 0, 2, 0, -1, 0, -1.96701e-08, -1.94917, 0.993387, 1.51404)
+material_override = SubResource("StandardMaterial3D_tdxyp")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa4" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(2, 0, 0, 0, 1.8, 0, 0, 0, 0.35, -0.600191, 0.882, -1.863)
+material_override = SubResource("StandardMaterial3D_icdl7")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa5" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(1.5, 0, 0, 0, 1.3, 0, 0, 0, 0.24, 1.15384, 0.647423, -1.863)
+material_override = SubResource("StandardMaterial3D_bctug")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="aa6" parent="SubViewportContainer/SubViewport/objects" instance=ExtResource("10_v5a5b")]
+transform = Transform3D(-0.508781, 0, -0.379828, 0, 1.6, 0, 0.208905, 0, -0.925057, 1.52559, 0.802264, 1.70097)
+material_override = SubResource("StandardMaterial3D_4dlwq")
+mesh = SubResource("QuadMesh_r7l62")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wegb")
+
+[node name="doornumber" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects"]
+transform = Transform3D(-0.582024, 0, 0.813172, 0, 1, 0, -0.813172, 0, -0.582024, 1.82908, 1.41502, -1.17156)
+mesh = SubResource("TextMesh_teq4o")
+
+[node name="abnormality" parent="." instance=ExtResource("21_2qoh7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -1)
+surface_material_override/0 = SubResource("StandardMaterial3D_2qoh7")
+
+[node name="UI" parent="." node_paths=PackedStringArray("camera", "path") instance=ExtResource("7_f8e06")]
+camera = NodePath("../SubViewportContainer/SubViewport/Path3D/PathFollow3D/roomCamera")
+path = NodePath("../SubViewportContainer/SubViewport/Path3D/PathFollow3D")
