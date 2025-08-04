@@ -86,6 +86,7 @@ billboard_mode = 1
 
 [node name="room0" type="Node3D"]
 script = ExtResource("1_okbme")
+isWeird = true
 
 [node name="DoorInteract" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ggago")

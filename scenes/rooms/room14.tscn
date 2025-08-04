@@ -94,6 +94,7 @@ billboard_mode = 1
 
 [node name="room0" type="Node3D"]
 script = ExtResource("1_ggkep")
+isWeird = true
 
 [node name="DoorInteract" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_un4ln")
